@@ -1,0 +1,5 @@
+1、	09:42:30.452 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+	org.yaml.snakeyaml.reader.ReaderException: special characters are not allowed
+
+原因：新建springBoot项目，默认配置文件编码是GBK，项目编译后中文注释会乱码无法识别，所以说special characters are not allowed。
+解决：在项目设置中editor-->file Encodings中修改项目编码为UTF-8  再应用保存，启动成功！
